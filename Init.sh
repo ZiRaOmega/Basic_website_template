@@ -1,15 +1,20 @@
 #!/bin/bash
 
+# Prompt user for project name
+read -p "Enter your project name: " project_name
+
 # Create project folder
-mkdir project
-cd project
+mkdir "$project_name"
 
-# Create files and folders
+# Change directory to project folder
+cd "$project_name"
+
+# Create subfolders
+mkdir js css
+
+# Create index.html file
 touch index.html
-mkdir css
-touch css/styles.css
-mkdir js
 touch js/script.js
+touch css/style.css
 
-# Print success message
-echo "Project folder initialized!"
+echo "Basic project folders and files created!"
